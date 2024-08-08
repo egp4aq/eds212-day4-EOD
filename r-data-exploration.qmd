@@ -1,5 +1,37 @@
 ---
 title: "Day 4 Afternoon activities"
 format: html
+editor_options: 
+  chunk_output_type: console
 ---
+
+```{r}
+library(tidyverse)
+library(skimr)
+library(GGally)
+```
+
+```{r}
+names(diamonds)
+
+dim(diamonds)
+
+summary(diamonds)
+
+head(diamonds)
+
+tail(diamonds)
+
+skimr::skim(diamonds)
+```
+
+```{r}
+GGally::ggpairs(data = diamonds)
+
+ggplot(data = diamonds, aes(x = price, y = carat)) +
+  geom_point()
+
+ggplot(data = diamonds, aes(x = carat)) +
+  geom_histogram()
+```
 
